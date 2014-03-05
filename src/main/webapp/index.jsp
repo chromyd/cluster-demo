@@ -1,3 +1,4 @@
+<%@ page import="java.net.InetAddress" %>
 <html>
 <body>
 <h2>Hello World!</h2>
@@ -7,7 +8,10 @@
     // embedded expression later on.
     System.out.println( "Evaluating date now" );
     java.util.Date date = new java.util.Date();
+	String hostname = InetAddress.getLocalHost().getHostName();
 %>
 Hello!  The time is now <%= date %>
+<br/>
+We are on <%= hostname%>
 </body>
 </html>
